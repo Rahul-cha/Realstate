@@ -1,0 +1,139 @@
+﻿@page
+@model Realstate.Pages.Property.Property_addingModel
+@{
+}
+
+<section class="md:h-screen py-36 flex items-center bg-[url('../../assets/images/auth.jpg')] bg-no-repeat bg-center">
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
+    <div class="container">
+        <div class="flex justify-center">
+            <h1>Add Property</h1>
+            <form action="submit_property.php" method="POST" enctype="multipart/form-data">
+
+                <div class="grid grid-cols-1">
+                            @*<div class="mb-4">
+                               
+                            </div>
+
+                    class="font-semibold"
+                    class="form-input mt-3"
+*@
+                   
+                        <div class="mb-4">
+                            <label class="font-semibold" for="propertyType">Property Type:</label>
+                            <input type="text" id="propertyType" class="form-input mt-3" name="propertyType" required><br><br>
+
+                        </div>
+
+                            <label for="propertyTitle" class="font-semibold">Property Title/Name:</label>
+                            <input type="text" class="form-input mt-3" id="propertyTitle" name="propertyTitle" required><br><br>
+                            <div class="mb-4">
+                            </div>
+
+                          
+                                <div class="mb-4">
+                                    <label for="propertyDescription" class="font-semibold">Property Description:</label><br>
+                                    <textarea id="propertyDescription" class="form-input mt-3" name="propertyDescription" rows="4" cols="50" required></textarea><br><br>
+
+                                </div>
+
+                               
+                                    <div class="mb-4">
+                                        <label for="propertyAddress" class="font-semibold">Property Address:</label>
+                                        <input type="text" id="propertyAddress" class="form-input mt-3" name="propertyAddress" required><br><br>
+                                    </div>
+
+
+                                    
+                            <div class="mb-4">
+                                            <label for="city" class="font-semibold">City:</label>
+                                            <input type="text" id="city" class="form-input mt-3" name="city" required><br><br>
+                               
+                            </div>
+
+
+                            
+                            <div class="mb-4">
+
+                        <label for="state" class="font-semibold">State/Province:</label>
+                        <input type="text" id="state" class="form-input mt-3" name="state" required><br><br>
+                            </div>
+
+
+                            
+                            <div class="mb-4">
+                        <label for="zip" class="font-semibold">ZIP/Postal Code:</label>
+                        <input type="text" id="zip" class="form-input mt-3" name="zip" required><br><br>
+                            </div>
+
+
+                                               
+                                                    <div class="mb-4">
+                        <label for="country" class="font-semibold">Country:</label>
+                        <input type="text" id="country" class="form-input mt-3" name="country" required><br><br>
+                                                    </div>
+
+
+                                                 
+                                                        <div class="mb-4">
+                        <label for="listingPrice" class="font-semibold">Listing Price:</label>
+                        <input type="number" id="listingPrice" class="form-input mt-3" name="listingPrice" required><br><br>
+                                                        </div>
+
+                    <div class="mb-4">
+                         <label for="propertyStatus" class="font-semibold">Property Status:</label>
+                    <select id="propertyStatus" class="form-input mt-3" name="propertyStatus" required>
+                    <option value="forSale">For Sale</option>
+                    <option value="forRent">For Rent</option>
+                </select><br><br>
+
+                    </div>
+
+
+                           
+                           
+                     <div class="mb-4">
+                        <label for="availabilityDate" class="font-semibold">Property Availability Date:</label>
+                        <input type="date" class="form-input mt-3" id="availabilityDate" name="availabilityDate" required><br><br>
+                    </div>
+
+                     <div class="mb-4">
+                        <label for="propertyPhotos" class="font-semibold">Property Photos:</label>
+                        <input type="file" class="form-input mt-3" id="propertyPhotos" name="propertyPhotos[]" multiple accept="image/*" required><br><br>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="fullName" class="font-semibold">Your Full Name:</label>
+                        <input type="text" class="form-input mt-3" id="fullName" name="fullName" required><br><br>
+
+                    </div>
+
+
+                    <div class="mb-4">
+                        <label for="email" class="font-semibold">Your Email Address:</label>
+                        <input type="email" class="form-input mt-3" id="email" name="email" required><br><br>
+
+                    </div>
+
+
+
+                    <div class="mb-4">
+
+                        <label for="phone" class="font-semibold">Your Phone Number:</label>
+                        <input type="tel" class="form-input mt-3" id="phone" name="phone" required><br><br>
+                    </div>
+
+                    </div>
+                    
+                  @*  <div class="mb-4">
+                    </div>*@
+
+                    
+
+                <input type="submit" value="Submit">
+            </form>
+                
+            </div>
+        </div>
+    </div>
+</section><!--end section -->
