@@ -3,13 +3,16 @@
 @{
 }
 
-<section class="md:h-screen py-36 flex items-center bg-[url('../../assets/images/auth.jpg')] bg-no-repeat bg-center">
-    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
+
+
+@*<section class="md:h-screen py-36 flex items-center bg-[url('../../assets/images/team.jpg')] bg-no-repeat bg-center">
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>*@
     <div class="container">
         <div class="flex justify-center">
+            
+            <form action="submit_property.php" method="POST" enctype="multipart/form-data" style="margin:100px;">
             <h1>Add Property</h1>
-            <form action="submit_property.php" method="POST" enctype="multipart/form-data">
-
+            <br /> <br />
                 <div class="grid grid-cols-1">
                             @*<div class="mb-4">
                                
@@ -129,11 +132,14 @@
                     </div>*@
 
                     
-
+                    <button class="btn btn-primary">
                 <input type="submit" value="Submit">
+</button>
+               
             </form>
                 
             </div>
         </div>
-    </div>
+ @*   </div>
 </section><!--end section -->
+*@
