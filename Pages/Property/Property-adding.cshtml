@@ -9,127 +9,222 @@
     <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>*@
     <div class="container">
         <div class="flex justify-center">
-            
-            <form action="submit_property.php" method="POST" enctype="multipart/form-data" style="margin:100px;">
+
+        <form method="POST" enctype="multipart/form-data" style="margin:100px;">
             <h1>Add Property</h1>
             <br /> <br />
-                <div class="grid grid-cols-1">
-                            @*<div class="mb-4">
-                               
-                            </div>
+            <div class="grid grid-cols-2 gap-6">
+                          
 
-                    class="font-semibold"
-                    class="form-input mt-3"
-*@
+                @*<textarea rows="3" type="text" asp-for="Title" name="Title" style=" width: 300px;" required>*@
                    
                         <div class="mb-4">
                             <label class="font-semibold" for="propertyType">Property Type:</label>
-                            <input type="text" id="propertyType" class="form-input mt-3" name="propertyType" required><br><br>
+                           @* <input type="text" id="propertyType" asp-for="PropAdd.Type"  class="form-input mt-3"  required><br><br>*@
+
+                    <select id="propertyType" asp-for="PropAdd.Type" class="form-input mt-3"  required>
+                        <option value="House">House</option>
+                        <option value="Apartment">Apartment</option>
+                    </select><br><br>
 
                         </div>
 
-                            <label for="propertyTitle" class="font-semibold">Property Title/Name:</label>
-                            <input type="text" class="form-input mt-3" id="propertyTitle" name="propertyTitle" required><br><br>
-                            <div class="mb-4">
-                            </div>
+                   
 
-                          
-                                <div class="mb-4">
-                                    <label for="propertyDescription" class="font-semibold">Property Description:</label><br>
-                                    <textarea id="propertyDescription" class="form-input mt-3" name="propertyDescription" rows="4" cols="50" required></textarea><br><br>
-
-                                </div>
-
-                               
-                                    <div class="mb-4">
-                                        <label for="propertyAddress" class="font-semibold">Property Address:</label>
-                                        <input type="text" id="propertyAddress" class="form-input mt-3" name="propertyAddress" required><br><br>
-                                    </div>
-
+            
 
                                     
                             <div class="mb-4">
-                                            <label for="city" class="font-semibold">City:</label>
-                                            <input type="text" id="city" class="form-input mt-3" name="city" required><br><br>
-                               
+                                            <label for="city" class="font-semibold">District</label>
+                                          @*  <input type="text" id="city" class="form-input mt-3" name="district" required><br><br>*@
+
+                    <select id="disctrict" class="form-input mt-3" asp-for="PropAdd.District" required>
+                        <option value="forSale">For Sale</option>
+                        <option value="forRent">For Rent</option>
+                    </select><br><br>
                             </div>
 
 
                             
                             <div class="mb-4">
 
-                        <label for="state" class="font-semibold">State/Province:</label>
-                        <input type="text" id="state" class="form-input mt-3" name="state" required><br><br>
+                        <label for="province" class="font-semibold">State/Province:</label>
+                        @*<input type="text" id="state" class="form-input mt-3" name="state" required><br><br>*@
+                    <select id="propertyStatus" class="form-input mt-3" asp-for="PropAdd.Province" required>
+                        <option value="one">Province 1 </option>
+                          <option value="one">Province 1 </option>
+                            <option value="one">Province 1 </option>
+                              <option value="one">Province 1 </option>
+                                <option value="one">Province 1 </option>
+
+
+                        
+                    </select><br><br>
                             </div>
 
 
                             
                             <div class="mb-4">
                         <label for="zip" class="font-semibold">ZIP/Postal Code:</label>
-                        <input type="text" id="zip" class="form-input mt-3" name="zip" required><br><br>
+                        <input type="number" id="zip" class="form-input mt-3"  asp-for="PropAdd.PostalCode" required><br><br>
                             </div>
 
 
-                                               
-                                                    <div class="mb-4">
-                        <label for="country" class="font-semibold">Country:</label>
-                        <input type="text" id="country" class="form-input mt-3" name="country" required><br><br>
-                                                    </div>
-
+                                      
 
                                                  
                                                         <div class="mb-4">
                         <label for="listingPrice" class="font-semibold">Listing Price:</label>
-                        <input type="number" id="listingPrice" class="form-input mt-3" name="listingPrice" required><br><br>
+                    <input type="number" id="listingPrice" class="form-input mt-3" asp-for="PropAdd.Price" required><br><br>
                                                         </div>
 
                     <div class="mb-4">
                          <label for="propertyStatus" class="font-semibold">Property Status:</label>
-                    <select id="propertyStatus" class="form-input mt-3" name="propertyStatus" required>
+                    <select id="propertyStatus" class="form-input mt-3" asp-for="PropAdd.Status" required>
                     <option value="forSale">For Sale</option>
                     <option value="forRent">For Rent</option>
                 </select><br><br>
 
                     </div>
 
+                <div class="mb-4">
+                    <label for="propertyDescription" class="font-semibold">Property Description:</label><br>
+                    <textarea id="propertyDescription" asp-for="PropAdd.Description" class="form-input mt-3" rows="15" cols="20" required></textarea><br><br>
+
+                </div>
+
+                    @*<textarea rows="3" type="text" asp-for="Title" name="Title" style=" width: 300px;" required>*@
 
                            
                            
-                     <div class="mb-4">
+                  @*   <div class="mb-4">
                         <label for="availabilityDate" class="font-semibold">Property Availability Date:</label>
                         <input type="date" class="form-input mt-3" id="availabilityDate" name="availabilityDate" required><br><br>
-                    </div>
+                    </div>*@
 
-                     <div class="mb-4">
-                        <label for="propertyPhotos" class="font-semibold">Property Photos:</label>
-                        <input type="file" class="form-input mt-3" id="propertyPhotos" name="propertyPhotos[]" multiple accept="image/*" required><br><br>
-                    </div>
+                    @* <div class="mb-4">*@
+                      @*  <label for="propertyPhotos" class="font-semibold">Property Photos:</label>
+                    <input type="file" class="form-input mt-3" asp-for="PropAdd.Photos" id="propertyPhotos" accept=" image/jpeg, image/png, image/gif" multiple required><br><br>
+                    
+                    <div id="imagePreview"></div>*@
 
-                    <div class="mb-4">
+
+
+
+
+                <div class="mb-4">
+                    <label for="propertyPhotos" class="font-semibold">Property Photos:</label>
+                    <input type="file" class="form-input mt-3" asp-for="PropAdd.Photos" id="propertyPhotos" accept=" image/jpeg, image/png, image/gif" onchange="previewImages(event)"  multiple required><br><br>
+                  @*  <input type="file" accept="image/*" multiple onchange="previewImages(event)">*@
+                    <div id="image-preview"></div>
+                    <input type="hidden" id="selectedImages" name="selectedImages">
+
+                    <script>
+                        function previewImages(event) {
+                            var previewContainer = document.getElementById('image-preview');
+
+                            Array.from(event.target.files).forEach(function (file) {
+                                var reader = new FileReader();
+
+                                reader.onload = function (event) {
+                                    var imageContainer = document.createElement('div');
+                                    imageContainer.classList.add('image-container');
+
+                                    var image = document.createElement('img');
+                                    image.src = event.target.result;
+                                    image.classList.add('preview-image');
+
+                                    var closeButton = document.createElement('span');
+                                    closeButton.classList.add('close-button');
+                                    closeButton.innerHTML = '&times;';
+                                    closeButton.addEventListener('click', function () {
+                                        imageContainer.remove();
+                                        updateSelectedImages();
+                                    });
+
+                                    imageContainer.appendChild(image);
+                                    imageContainer.appendChild(closeButton);
+                                    previewContainer.appendChild(imageContainer);
+                                    updateSelectedImages();
+                                };
+
+                                reader.readAsDataURL(file);
+                            });
+                        }
+
+                        function updateSelectedImages() {
+                            var previewContainer = document.getElementById('image-preview');
+                            var selectedImagesInput = document.getElementById('selectedImages');
+                            var imageContainers = previewContainer.getElementsByClassName('image-container');
+                            var selectedImages = [];
+
+                            for (var i = 0; i < imageContainers.length; i++) {
+                                var image = imageContainers[i].getElementsByTagName('img')[0];
+                                selectedImages.push(image.src);
+                            }
+
+                            selectedImagesInput.value = selectedImages.join(',');
+                        }
+                    </script>
+
+                    <style>
+                        .image-container {
+                            display: inline-block;
+                            position: relative;
+                            margin-right: 10px;
+                            margin-bottom: 10px;
+                        }
+
+                        .preview-image {
+                            max-width: 100%;
+                            max-height: 200px; /* Adjust the height as needed */
+                        }
+
+                        .close-button {
+                            position: absolute;
+                            top: 5px;
+                            right: 5px;
+                            font-size: 20px;
+                            color: #000;
+                            cursor: pointer;
+                        }
+                    </style>
+
+
+
+
+
+                </div>
+
+
+
+                           @* logged in user ko name *@
+                  @*  <div class="mb-4">
                         <label for="fullName" class="font-semibold">Your Full Name:</label>
                         <input type="text" class="form-input mt-3" id="fullName" name="fullName" required><br><br>
 
                     </div>
-
+*@
 
                     <div class="mb-4">
                         <label for="email" class="font-semibold">Your Email Address:</label>
-                        <input type="email" class="form-input mt-3" id="email" name="email" required><br><br>
+                    <input type="email" class="form-input mt-3" id="email" asp-for="PropAdd.EmailAddress" required><br><br>
 
                     </div>
 
 
+
+                    @*Optional*@
 
                     <div class="mb-4">
 
                         <label for="phone" class="font-semibold">Your Phone Number:</label>
-                        <input type="tel" class="form-input mt-3" id="phone" name="phone" required><br><br>
+                    <input type="tel" class="form-input mt-3" id="phone" asp-for="PropAdd.PhoneNo" required><br><br>
                     </div>
 
                     </div>
                     
-                  @*  <div class="mb-4">
-                    </div>*@
+              
 
                     
                     <button class="btn btn-primary">
@@ -140,6 +235,24 @@
                 
             </div>
         </div>
- @*   </div>
-</section><!--end section -->
-*@
+
+
+
+
+
+
+
+@*   <div class="mb-4">
+                            <label for="propertyTitle" class="font-semibold">Property Title/Name:</label>
+                            <input type="text" class="form-input mt-3" id="propertyTitle" name="propertyTitle" required><br><br>
+
+                            </div>*@
+
+
+
+
+
+@*  <div class="mb-4">
+                                        <label for="propertyAddress" class="font-semibold">Property Address:</label>
+                                        <input type="text" id="propertyAddress" class="form-input mt-3" name="propertyAddress" required><br><br>
+                                    </div>*@

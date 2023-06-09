@@ -8,5 +8,8 @@ namespace Realstate.Pages.Authentication
         public void OnGet()
         {
         }
+
+        public void OnPost() { 
+        }
     }
 }
