@@ -5,6 +5,7 @@ namespace Realstate.Model
 {
     public class PropertyDetailsModel
     {
+        
         public string? Type { get; set; }
         public string? District { get; set; }
 
@@ -17,7 +18,7 @@ namespace Realstate.Model
         public int? PostalCode { get; set; }
 
         [NotMapped]
-        public IFormFile? Photos { get; set; }
+        public List<IFormFile>? Photos { get; set; }
         public string? Description { get; set; }
 
 

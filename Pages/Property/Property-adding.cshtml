@@ -7,85 +7,85 @@
 
 @*<section class="md:h-screen py-36 flex items-center bg-[url('../../assets/images/team.jpg')] bg-no-repeat bg-center">
     <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>*@
-    <div class="container">
-        <div class="flex justify-center">
+<div class="container">
+    <div class="flex justify-center">
 
         <form method="POST" enctype="multipart/form-data" style="margin:100px;">
-            <h1>Add Property</h1>
+            <h1> <b> Add Property </b> </h1>
             <br /> <br />
             <div class="grid grid-cols-2 gap-6">
-                          
+
 
                 @*<textarea rows="3" type="text" asp-for="Title" name="Title" style=" width: 300px;" required>*@
-                   
-                        <div class="mb-4">
-                            <label class="font-semibold" for="propertyType">Property Type:</label>
-                           @* <input type="text" id="propertyType" asp-for="PropAdd.Type"  class="form-input mt-3"  required><br><br>*@
 
-                    <select id="propertyType" asp-for="PropAdd.Type" class="form-input mt-3"  required>
+                <div class="mb-4">
+                    <label class="font-semibold" for="propertyType">Property Type:</label>
+                    @* <input type="text" id="propertyType" asp-for="PropAdd.Type"  class="form-input mt-3"  required><br><br>*@
+
+                    <select id="propertyType" asp-for="PropAdd.Type" class="form-input mt-3" required>
                         <option value="House">House</option>
                         <option value="Apartment">Apartment</option>
                     </select><br><br>
 
-                        </div>
+                </div>
 
-                   
 
-            
 
-                                    
-                            <div class="mb-4">
-                                            <label for="city" class="font-semibold">District</label>
-                                          @*  <input type="text" id="city" class="form-input mt-3" name="district" required><br><br>*@
+
+
+
+                <div class="mb-4">
+                    <label for="city" class="font-semibold">District</label>
+                    @*  <input type="text" id="city" class="form-input mt-3" name="district" required><br><br>*@
 
                     <select id="disctrict" class="form-input mt-3" asp-for="PropAdd.District" required>
                         <option value="forSale">For Sale</option>
                         <option value="forRent">For Rent</option>
                     </select><br><br>
-                            </div>
+                </div>
 
 
-                            
-                            <div class="mb-4">
 
-                        <label for="province" class="font-semibold">State/Province:</label>
-                        @*<input type="text" id="state" class="form-input mt-3" name="state" required><br><br>*@
+                <div class="mb-4">
+
+                    <label for="province" class="font-semibold">State/Province:</label>
+                    @*<input type="text" id="state" class="form-input mt-3" name="state" required><br><br>*@
                     <select id="propertyStatus" class="form-input mt-3" asp-for="PropAdd.Province" required>
                         <option value="one">Province 1 </option>
-                          <option value="one">Province 1 </option>
-                            <option value="one">Province 1 </option>
-                              <option value="one">Province 1 </option>
-                                <option value="one">Province 1 </option>
+                        <option value="one">Province 1 </option>
+                        <option value="one">Province 1 </option>
+                        <option value="one">Province 1 </option>
+                        <option value="one">Province 1 </option>
 
 
-                        
+
                     </select><br><br>
-                            </div>
+                </div>
 
 
-                            
-                            <div class="mb-4">
-                        <label for="zip" class="font-semibold">ZIP/Postal Code:</label>
-                        <input type="number" id="zip" class="form-input mt-3"  asp-for="PropAdd.PostalCode" required><br><br>
-                            </div>
+
+                <div class="mb-4">
+                    <label for="zip" class="font-semibold">ZIP/Postal Code:</label>
+                    <input type="number" id="zip" class="form-input mt-3" asp-for="PropAdd.PostalCode" required><br><br>
+                </div>
 
 
-                                      
 
-                                                 
-                                                        <div class="mb-4">
-                        <label for="listingPrice" class="font-semibold">Listing Price:</label>
+
+
+                <div class="mb-4">
+                    <label for="listingPrice" class="font-semibold">Listing Price:</label>
                     <input type="number" id="listingPrice" class="form-input mt-3" asp-for="PropAdd.Price" required><br><br>
-                                                        </div>
+                </div>
 
-                    <div class="mb-4">
-                         <label for="propertyStatus" class="font-semibold">Property Status:</label>
+                <div class="mb-4">
+                    <label for="propertyStatus" class="font-semibold">Property Status:</label>
                     <select id="propertyStatus" class="form-input mt-3" asp-for="PropAdd.Status" required>
-                    <option value="forSale">For Sale</option>
-                    <option value="forRent">For Rent</option>
-                </select><br><br>
+                        <option value="forSale">For Sale</option>
+                        <option value="forRent">For Rent</option>
+                    </select><br><br>
 
-                    </div>
+                </div>
 
                 <div class="mb-4">
                     <label for="propertyDescription" class="font-semibold">Property Description:</label><br>
@@ -93,53 +93,61 @@
 
                 </div>
 
-                    @*<textarea rows="3" type="text" asp-for="Title" name="Title" style=" width: 300px;" required>*@
-
-                           
-                           
-                  @*   <div class="mb-4">
-                        <label for="availabilityDate" class="font-semibold">Property Availability Date:</label>
-                        <input type="date" class="form-input mt-3" id="availabilityDate" name="availabilityDate" required><br><br>
-                    </div>*@
-
-                    @* <div class="mb-4">*@
-                      @*  <label for="propertyPhotos" class="font-semibold">Property Photos:</label>
-                    <input type="file" class="form-input mt-3" asp-for="PropAdd.Photos" id="propertyPhotos" accept=" image/jpeg, image/png, image/gif" multiple required><br><br>
-                    
-                    <div id="imagePreview"></div>*@
 
 
 
+
+                @*   <div class="mb-4">
+                <label for="availabilityDate" class="font-semibold">Property Availability Date:</label>
+                <input type="date" class="form-input mt-3" id="availabilityDate" name="availabilityDate" required><br><br>
+                </div>*@
+
+            @*     <div class="mb-4">
+                 <label for="propertyPhotos" class="font-semibold">Property Photos:</label>
+                <input type="file" class="form-input mt-3" asp-for="PropAdd.Photos" id="propertyPhotos" accept=" image/jpeg, image/png, image/gif" multiple required><br><br>
+
+                <div id="imagePreview"></div>*@
 
 
                 <div class="mb-4">
                     <label for="propertyPhotos" class="font-semibold">Property Photos:</label>
-                    <input type="file" class="form-input mt-3" asp-for="PropAdd.Photos" id="propertyPhotos" accept=" image/jpeg, image/png, image/gif" onchange="previewImages(event)"  multiple required><br><br>
-                  @*  <input type="file" accept="image/*" multiple onchange="previewImages(event)">*@
+                    <input type="file" class="form-input mt-3" asp-for="PropAdd.Photos" id="propertyPhotos" accept=" image/*" onchange="previewImages(event)" multiple required><br><br>
+                  
                     <div id="image-preview"></div>
                     <input type="hidden" id="selectedImages" name="selectedImages">
 
-                    <script>
+
+
+
+
+                    <script type="text/javascript">
+
+                        let fileInput = document.getElementById("propertyPhotos");
+                      
+                        let previewContainer = document.getElementById('image-preview');
+                        let selectedImages = []; // Array to store selected images
+
                         function previewImages(event) {
-                            var previewContainer = document.getElementById('image-preview');
+                           
 
                             Array.from(event.target.files).forEach(function (file) {
-                                var reader = new FileReader();
+                                let reader = new FileReader();
 
                                 reader.onload = function (event) {
-                                    var imageContainer = document.createElement('div');
+                                    let imageContainer = document.createElement('div');
                                     imageContainer.classList.add('image-container');
 
-                                    var image = document.createElement('img');
+                                    let image = document.createElement('img');
                                     image.src = event.target.result;
                                     image.classList.add('preview-image');
 
-                                    var closeButton = document.createElement('span');
+                                    let closeButton = document.createElement('span');
                                     closeButton.classList.add('close-button');
                                     closeButton.innerHTML = '&times;';
                                     closeButton.addEventListener('click', function () {
                                         imageContainer.remove();
                                         updateSelectedImages();
+                                        numOfFiles.textContent = `${fileInput.files.length} Files Selected`; // Update the file count after removal
                                     });
 
                                     imageContainer.appendChild(image);
@@ -153,18 +161,22 @@
                         }
 
                         function updateSelectedImages() {
-                            var previewContainer = document.getElementById('image-preview');
-                            var selectedImagesInput = document.getElementById('selectedImages');
-                            var imageContainers = previewContainer.getElementsByClassName('image-container');
-                            var selectedImages = [];
+                            let previewContainer = document.getElementById('image-preview');
+                            let selectedImagesInput = document.getElementById('selectedImages');
+                            let imageContainers = previewContainer.getElementsByClassName('image-container');
 
-                            for (var i = 0; i < imageContainers.length; i++) {
-                                var image = imageContainers[i].getElementsByTagName('img')[0];
+                            selectedImages = []; // Clear the array
+
+                            for (let i = 0; i < imageContainers.length; i++) {
+                                let image = imageContainers[i].getElementsByTagName('img')[0];
                                 selectedImages.push(image.src);
                             }
 
                             selectedImagesInput.value = selectedImages.join(',');
                         }
+
+
+                                             
                     </script>
 
                     <style>
@@ -189,52 +201,152 @@
                             cursor: pointer;
                         }
                     </style>
+                </div>
 
 
 
 
+
+              @*  <div class="mb-4">
+                <label for="propertyPhotos" class="font-semibold">Property Photos:</label>
+                <input type="file" class="form-input mt-3" asp-for="PropAdd.Photos[0]" id="propertyPhotos1" accept=" image/*" onchange="previewImages(event,'propertyPhotos1')" multiple required><br><br>
+
+                <div id="image-preview"></div>
+                <input type="hidden" id="selectedImages" name="selectedImages">
+
+                <script type="text/javascript">
+                function previewImages(event, propertyPhotos) {
+                var previewContainer = document.getElementById('image-preview');
+
+                Array.from(event.target.files).forEach(function (file) {
+                var reader = new FileReader();
+
+                reader.onload = function (event) {
+                var imageContainer = document.createElement('div');
+                imageContainer.classList.add('image-container');
+
+                var image = document.createElement('img');
+                image.src = event.target.result;
+                image.classList.add('preview-image');
+
+                var closeButton = document.createElement('span');
+                closeButton.classList.add('close-button');
+                closeButton.innerHTML = '&times;';
+                closeButton.id=propertyPhotos;
+                closeButton.addEventListener('click', function () {
+                imageContainer.remove();
+                updateSelectedImages();
+                });
+
+                imageContainer.appendChild(image);
+                imageContainer.appendChild(closeButton);
+                previewContainer.appendChild(imageContainer);
+                updateSelectedImages();
+                };
+
+                reader.readAsDataURL(file);
+                });
+                }
+
+                function updateSelectedImages() {
+                var previewContainer = document.getElementById('image-preview');
+                var selectedImagesInput = document.getElementById('selectedImages');
+                var imageContainers = previewContainer.getElementsByClassName('image-container');
+                var selectedImages = [];
+
+                for (var i = 0; i < imageContainers.length; i++) {
+
+
+                var image = imageContainers[i].getElementsByTagName('img')[0];
+                selectedImages.push(image.src);
+                }
+
+                selectedImagesInput.value = selectedImages.join(',');
+                }
+                </script>
+
+                <style>
+                .image-container {
+                display: inline-block;
+                position: relative;
+                margin-right: 10px;
+                margin-bottom: 10px;
+                }
+
+                .preview-image {
+                max-width: 100%;
+                max-height: 200px; /* Adjust the height as needed */
+                }
+
+                .close-button {
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                font-size: 20px;
+                color: #000;
+                cursor: pointer;
+                }
+                </style>
+                </div>*@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                @* logged in user ko name *@
+                @*  <div class="mb-4">
+                <label for="fullName" class="font-semibold">Your Full Name:</label>
+                <input type="text" class="form-input mt-3" id="fullName" name="fullName" required><br><br>
+
+                </div>
+                *@
+
+                <div class="mb-4">
+                    <label for="email" class="font-semibold">Your Email Address:</label>
+                    <input type="email" class="form-input mt-3" id="email" asp-for="PropAdd.EmailAddress" required><br><br>
 
                 </div>
 
 
 
-                           @* logged in user ko name *@
-                  @*  <div class="mb-4">
-                        <label for="fullName" class="font-semibold">Your Full Name:</label>
-                        <input type="text" class="form-input mt-3" id="fullName" name="fullName" required><br><br>
+                @*Optional*@
 
-                    </div>
-*@
+                <div class="mb-4">
 
-                    <div class="mb-4">
-                        <label for="email" class="font-semibold">Your Email Address:</label>
-                    <input type="email" class="form-input mt-3" id="email" asp-for="PropAdd.EmailAddress" required><br><br>
-
-                    </div>
-
-
-
-                    @*Optional*@
-
-                    <div class="mb-4">
-
-                        <label for="phone" class="font-semibold">Your Phone Number:</label>
+                    <label for="phone" class="font-semibold">Your Phone Number:</label>
                     <input type="tel" class="form-input mt-3" id="phone" asp-for="PropAdd.PhoneNo" required><br><br>
-                    </div>
+                </div>
 
-                    </div>
-                    
-              
-
-                    
-                    <button class="btn btn-primary">
-                <input type="submit" value="Submit">
-</button>
-               
-            </form>
-                
             </div>
-        </div>
+
+
+
+
+            <button class="btn btn-primary" class="text-center">
+                <input type="submit" class="text-black dark:text-white font-bold" value="Submit">
+            </button>
+
+
+
+
+        </form>
+
+    </div>
+</div>
 
 
 
